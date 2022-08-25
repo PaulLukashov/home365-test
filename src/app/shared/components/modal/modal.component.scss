@@ -1,0 +1,43 @@
+.modal-wrapper {
+  width: 100%;
+
+  .status {
+    display: flex;
+
+    dt {
+      font-weight: bold;
+      flex: 0 0 35%;
+    }
+
+    dd {
+      margin-left: 10px;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      &.active-status {
+        color: #08be22;
+      }
+
+      &.vacant-status {
+        color: #d52b1e;
+      }
+
+      &.inactive-status {
+        color: #353435;
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+
+    dt {
+      flex: 0 0 35%;
+      font-weight: bold;
+    }
+
+    dd {
+      margin-left: 10px;
+    }
+  }
+}
