@@ -1,1 +1,8 @@
-<p>properties-list-filters works!</p>
+<div class="filters-wrapper">
+  <app-select-status [statuses]="propertyStatuses"
+                     [selectTitle]="'Property status'"
+                     (selectedValue)="filterTable($event, 'property')"></app-select-status>
+  <app-select-status [statuses]="tenantStatuses"
+                     [selectTitle]="'Tenant status'"
+                     (selectedValue)="filterTable($event, 'tenant')"></app-select-status>
+</div>

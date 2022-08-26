@@ -31,7 +31,10 @@ export class Property implements PropertyResponce {
   plan!: string;
 
   constructor(data: PropertyResponce) {
-    Object.assign(this, data);
+    if (data) {
+      Object.assign(this, data);
+    }
+
     if (data.tenant) {
       this.tenant = new Tenant(data.tenant);
     }

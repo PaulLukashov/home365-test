@@ -6,6 +6,8 @@
 </ng-container>
 
 <ng-template #elseTemplate>
+  <app-properties-list-filters [tableData]="properties"
+                               (filteredTabeData)="getFilteredTableData($event)"></app-properties-list-filters>
   <div class="mat-elevation-z8">
     <table mat-table
            [dataSource]="dataSource">

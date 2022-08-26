@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill">
+  <mat-label>{{ selectTitle }}</mat-label>
+  <mat-select (selectionChange)="setSelectValue($event)">
+    <mat-option value="all">All</mat-option>
+    <mat-option *ngFor="let status of statuses"
+                [value]="status"><span class="capitalise">{{ status }}</span></mat-option>
+  </mat-select>
+</mat-form-field>

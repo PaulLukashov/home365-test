@@ -1,15 +1,15 @@
 .mat-elevation-z8 {
   width: 95%;
-  margin: 30px auto;
+  margin: 0 auto;
 
   table {
     width: 100%;
-    font-weight: 500;
 
     .active-status,
     .vacant-status,
     .inactive-status {
       text-transform: uppercase;
+      font-weight: 600;
     }
 
     .active-status {
@@ -27,8 +27,9 @@
     .mat-column-property.mat-cell,
     .mat-column-owner.mat-cell,
     .mat-column-tenant.mat-cell {
+      font-weight: 500;
       text-decoration: underline;
-      color: blue;
+      color: #519be8;
       cursor: pointer;
     }
 

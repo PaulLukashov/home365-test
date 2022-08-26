@@ -59,9 +59,6 @@ export class PropertiesListComponent implements OnInit {
 
           setTimeout(() => {
             this.dataSource.paginator = this.paginator;
-            this.properties.forEach((prop) =>
-              console.log(prop?.tenant?.tenantFullName)
-            );
           }, 0);
         },
       });
@@ -72,5 +69,12 @@ export class PropertiesListComponent implements OnInit {
       width: '500px',
       data: { title, info, status },
     });
+  }
+
+  getFilteredTableData(event: Property[]) {
+    this.dataSource = new MatTableDataSource<Property>(event);
+    setTimeout(() => {
+      this.dataSource.paginator = this.paginator;
+    }, 0);
   }
 }
